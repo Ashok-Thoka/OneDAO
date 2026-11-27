@@ -1,0 +1,423 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    background: #f4f6fb;
+    color: #182230;
+}
+
+/* Authentication Background */
+
+.auth-bg {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+/* Authentication Card */
+
+.auth-card {
+    width: min(100%, 430px);
+    background: #fff;
+    padding: 38px;
+    border: 1px solid #e5eaf2;
+    border-radius: 18px;
+    box-shadow: 0 18px 55px #1d355710;
+}
+
+.auth-card.wide {
+    width: min(100%, 500px);
+}
+
+/* Branding */
+
+.brand {
+    font-weight: 800;
+    color: #3347a9;
+    letter-spacing: .3px;
+}
+
+.brand.large {
+    font-size: 28px;
+    margin-bottom: 26px;
+}
+
+/* Headings */
+
+h1 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+h2 {
+    margin: 0 0 14px;
+}
+
+/* Text */
+
+.muted,
+small {
+    color: #687386;
+}
+
+.muted {
+    line-height: 1.6;
+}
+
+/* Form Elements */
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 650;
+    margin: 18px 0;
+    color: #344054;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 13px;
+    border: 1px solid #d7deea;
+    border-radius: 9px;
+    font: inherit;
+    background: #fff;
+    color: #182230;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #c7d2fe;
+    border-color: #5968d8;
+}
+
+textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+small {
+    display: block;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+/* Buttons */
+
+.btn {
+    border: 0;
+    border-radius: 9px;
+    padding: 11px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #4054c5;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #3043ad;
+}
+
+.btn-outline {
+    background: #fff;
+    color: #344054;
+    border: 1px solid #d5dce8;
+}
+
+.full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Authentication Links */
+
+.switch {
+    text-align: center;
+    font-size: 14px;
+    margin: 24px 0 0;
+    color: #667085;
+}
+
+.switch a {
+    color: #4054c5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Messages */
+
+.message {
+    min-height: 20px;
+    font-size: 14px;
+    color: #b42318;
+}
+
+.message.success {
+    color: #067647;
+}
+
+/* Top Navigation Bar */
+
+.topbar {
+    height: 68px;
+    background: #fff;
+    border-bottom: 1px solid #e6eaf0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(calc((100% - 1160px)/2), 24px);
+}
+
+.topbar .brand {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navlinks a {
+    color: #475467;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+/* Main Container */
+
+.container {
+    width: min(1160px, calc(100% - 40px));
+    margin: 42px auto;
+}
+
+/* Page Heading */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: #6978c9;
+    margin: 0 0 8px;
+}
+
+/* Panels and Cards */
+
+.panel,
+.stat-card {
+    background: #fff;
+    border: 1px solid #e6eaf0;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 5px 20px #172b4d08;
+}
+
+.welcome-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-panel h2 {
+    font-size: 25px;
+}
+
+/* User Avatar */
+
+.avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e9edff;
+    color: #3549b5;
+    font-weight: 800;
+    font-size: 23px;
+}
+
+/* Dashboard Statistics */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.stat-card span {
+    display: block;
+    color: #667085;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.stat-card strong {
+    font-size: 20px;
+}
+
+/* Utility Classes */
+
+.hidden {
+    display: none;
+}
+
+/* Form Layout */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Product Toolbar */
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.toolbar input {
+    max-width: 240px;
+    margin: 0;
+}
+
+.toolbar select {
+    width: auto;
+    margin: 0;
+}
+
+/* Product Table */
+
+.table-wrap {
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 13px 10px;
+    border-bottom: 1px solid #edf0f5;
+    vertical-align: top;
+}
+
+th {
+    color: #667085;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+td button {
+    margin-right: 5px;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0 4px;
+}
+
+/* Link Buttons */
+
+.link-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        padding: 0 16px;
+    }
+
+    .navlinks {
+        gap: 10px;
+    }
+
+    .navlinks a {
+        font-size: 12px;
+    }
+
+    .container {
+        margin: 24px auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        flex-wrap: wrap;
+    }
+
+    .toolbar input,
+    .toolbar select {
+        max-width: none;
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .span-2 {
+        grid-column: auto;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .auth-card {
+        padding: 28px;
+    }
+}

@@ -1,0 +1,39 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  error:
+    include-message: never
+
+spring:
+  application:
+    name: onedao-jsp-ui
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    url: ${DB_URL:jdbc:sqlserver://localhost:1433;databaseName=OneDAO;encrypt=false;trustServerCertificate=true}
+    username: ${DB_USERNAME:smart}
+    password: ${DB_PASSWORD:Smart@123}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:OneDAO-Local-JWT-Secret-Key-Change-Me-2026-At-Least-32}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:2}
+  geo:
+    base-url: ${GEO_BASE_URL:http://ip-api.com/json}
+    local-country: ${LOCAL_COUNTRY:India}
+  security:
+    blocked-countries: ${BLOCKED_COUNTRIES:Syria,Afghanistan,Iran}
